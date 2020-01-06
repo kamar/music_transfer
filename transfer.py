@@ -8,6 +8,11 @@ import urllib.parse
 
 
 def move_files():
+
+    """
+    Transfers music files from path of playlist to specific folder.
+    """
+
     fh = open('/home/km/Μουσική/xristougenniatika_new.m3u', 'r')
     text = fh.read()
     fh.close()
