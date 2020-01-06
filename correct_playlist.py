@@ -8,6 +8,9 @@ import urllib.parse
 
 def correct_content(old_playlist='/home/km/Μουσική/xristougenniatika_new.m3u', pat='Christmas_.+'):
 
+    """
+    Corrects the playlist for  my car audio.
+    """
     # with open(old_playlist, "r", encoding="UTF-8") as fh:
     #     text = fh.read()
     fh = open(old_playlist, "r")
