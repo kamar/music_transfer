@@ -13,6 +13,7 @@ def correct_content(old_playlist='/home/km/Μουσική/xristougenniatika_new.
     """
     # with open(old_playlist, "r", encoding="UTF-8") as fh:
     #     text = fh.read()
+    # TODO: Error handling.
     fh = open(old_playlist, "r")
     text = fh.read()
     fh.close()
