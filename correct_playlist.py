@@ -42,13 +42,6 @@ def correct_content(old_playlist='/home/km/Μουσική/xristougenniatika_new.
         fh = open(new_playlist, "w")
         fh.write(newtext)
         fh.close()
-    # else:
-    #     d, f = os.path.split(old_playlist)
-    #     print(d, f)
-    #     print("Γράφω το αρχείο {}".format(os.path.join(d, 'new_'+f))
-    #     # fh1 = open(os.path.join(d, 'new_'+f), "w")
-    #     # fh1.write(newtext)
-    #     # fh1.close()
 
 
 if __name__ == "__main__":
