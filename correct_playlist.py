@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import sys
 import re
 import urllib.parse
 
@@ -11,12 +12,12 @@ def correct_content(old_playlist='/home/km/Μουσική/xristougenniatika_new.
     """
     Corrects the playlist for  my car audio.
     """
-    # with open(old_playlist, "r", encoding="UTF-8") as fh:
-    #     text = fh.read()
+    with open(old_playlist, "r", encoding="UTF-8") as fh:
+        text = fh.read()
     # TODO: Error handling.
-    fh = open(old_playlist, "r")
-    text = fh.read()
-    fh.close()
+    # fh = open(old_playlist, "r")
+    # text = fh.read()
+    # fh.close()
 
     results = re.findall(pat, text)
     newtext = text
@@ -45,4 +46,10 @@ def correct_content(old_playlist='/home/km/Μουσική/xristougenniatika_new.
 
 
 if __name__ == "__main__":
-    correct_content()
+    if len(sys.argv) > 1:
+        if len(sys.argv) == 2:
+            correct_content(sys.argv[1])
+        elif len(sys.argv) == 3:
+            correct_content(sys.argv[1], sys.argv[2])
+    else:
+        correct_content()
